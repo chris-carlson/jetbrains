@@ -1,0 +1,840 @@
+[
+  {
+    "code": "ShowBookmarks",
+    "key1": "M",
+    "key2": "V"
+  },
+  {
+    "code": "ShowTypeBookmarks",
+    "key1": "M",
+    "key2": "G"
+  },
+  {
+    "code": "ToggleBookmark",
+    "key1": "M",
+    "key2": "M"
+  },
+  {
+    "code": "ToggleBookmarkWithMnemonic",
+    "key1": "M",
+    "key2": "N"
+  },
+  {
+    "code": "Debugger.RestoreBreakpoint",
+    "key1": "B",
+    "key2": "R"
+  },
+  {
+    "code": "ToggleBreakpointEnabled",
+    "key1": "B",
+    "key2": "T"
+  },
+  {
+    "code": "ToggleLineBreakpoint",
+    "key1": "B",
+    "key2": "B"
+  },
+  {
+    "code": "ToggleMethodBreakpoint",
+    "key1": "B",
+    "key2": "M",
+    "ide": "IntelliJ"
+  },
+  {
+    "code": "ToggleTemporaryLineBreakpoint",
+    "key1": "B",
+    "key2": "P"
+  },
+  {
+    "code": "CloseAllEditors",
+    "key1": "W",
+    "key2": "A"
+  },
+  {
+    "code": "CloseAllEditorsButActive",
+    "key1": "W",
+    "key2": "O"
+  },
+  {
+    "code": "CloseAllUnmodifiedEditors",
+    "key1": "W",
+    "key2": "U"
+  },
+  {
+    "code": "CloseContent",
+    "key1": "W",
+    "key2": "W"
+  },
+  {
+    "code": "CloseProject",
+    "key1": "W",
+    "key2": "P"
+  },
+  {
+    "code": "CopyAbsolutePath",
+    "key1": "C",
+    "key2": "A"
+  },
+  {
+    "code": "CopyContentRootPath",
+    "key1": "C",
+    "key2": "P"
+  },
+  {
+    "code": "CopyFileName",
+    "key1": "C",
+    "key2": "N"
+  },
+  {
+    "code": "EvaluateExpression",
+    "key1": "D",
+    "key2": "V"
+  },
+  {
+    "code": "QuickEvaluateExpression",
+    "key1": "D",
+    "key2": "E"
+  },
+  {
+    "code": "Resume",
+    "key1": "D",
+    "key2": "R"
+  },
+  {
+    "code": "SmartStepInto",
+    "key1": "D",
+    "key2": "S"
+  },
+  {
+    "code": "StepInto",
+    "key1": "D",
+    "key2": "I"
+  },
+  {
+    "code": "StepOut",
+    "key1": "D",
+    "key2": "O"
+  },
+  {
+    "code": "StepOver",
+    "key1": "D",
+    "key2": "D"
+  },
+  {
+    "code": "Find",
+    "key1": "F",
+    "key2": "F"
+  },
+  {
+    "code": "FindInPath",
+    "key1": "F",
+    "key2": "P"
+  },
+  {
+    "code": "Replace",
+    "key1": "F",
+    "key2": "R"
+  },
+  {
+    "code": "ReplaceInPath",
+    "key1": "F",
+    "key2": "L"
+  },
+  {
+    "code": "CollapseAllRegions",
+    "key1": "-",
+    "key2": "A"
+  },
+  {
+    "code": "CollapseRegion",
+    "key1": "-",
+    "key2": "-"
+  },
+  {
+    "code": "CollapseRegionRecursively",
+    "key1": "-",
+    "key2": "R"
+  },
+  {
+    "code": "ExpandAllRegions",
+    "key1": "=",
+    "key2": "A"
+  },
+  {
+    "code": "ExpandRegion",
+    "key1": "=",
+    "key2": "="
+  },
+  {
+    "code": "ExpandRegionRecursively",
+    "key1": "=",
+    "key2": "R"
+  },
+  {
+    "code": "OptimizeImports",
+    "key1": "L",
+    "key2": "I"
+  },
+  {
+    "code": "RearrangeCode",
+    "key1": "L",
+    "key2": "R"
+  },
+  {
+    "code": "ReformatCode",
+    "key1": "L",
+    "key2": "L"
+  },
+  {
+    "code": "ShowReformatFileDialog",
+    "key1": "L",
+    "key2": "F"
+  },
+  {
+    "code": "Generate",
+    "key1": "E",
+    "key2": "E"
+  },
+  {
+    "code": "ImplementMethods",
+    "key1": "E",
+    "key2": "I"
+  },
+  {
+    "code": "OverrideMethods",
+    "key1": "E",
+    "key2": "S"
+  },
+  {
+    "code": "SurroundWith",
+    "key1": "E",
+    "key2": "S"
+  },
+  {
+    "code": "Unwrap",
+    "key1": "E",
+    "key2": "R"
+  },
+  {
+    "code": "Annotate",
+    "key1": "G",
+    "key2": "X"
+  },
+  {
+    "code": "ChangesView.ApplyPatch",
+    "key1": "G",
+    "key2": "Y"
+  },
+  {
+    "code": "ChangesView.CreatePatch",
+    "key1": "G",
+    "key2": "T"
+  },
+  {
+    "code": "ChangesView.Revert",
+    "key1": "G",
+    "key2": "R"
+  },
+  {
+    "code": "ChangesView.Shelve",
+    "key1": "G",
+    "key2": "S"
+  },
+  {
+    "code": "Compare.SameVersion",
+    "key1": "G",
+    "key2": "D"
+  },
+  {
+    "code": "Git.Add",
+    "key1": "G",
+    "key2": "A"
+  },
+  {
+    "code": "Git.Branches",
+    "key1": "G",
+    "key2": "B"
+  },
+  {
+    "code": "Git.CompareWithBranch",
+    "key1": "G",
+    "key2": "E"
+  },
+  {
+    "code": "Git.CreateNewBranch",
+    "key1": "G",
+    "key2": "N"
+  },
+  {
+    "code": "Git.Merge",
+    "key1": "G",
+    "key2": "M"
+  },
+  {
+    "code": "Git.Reset",
+    "key1": "G",
+    "key2": "Z"
+  },
+  {
+    "code": "uk.co.ben_gibson.git.link.ui.actions.menu.BrowserAction",
+    "key1": "G",
+    "key2": "O"
+  },
+  {
+    "code": "uk.co.ben_gibson.git.link.ui.actions.menu.CopyAction",
+    "key1": "G",
+    "key2": "L"
+  },
+  {
+    "code": "Vcs.Push",
+    "key1": "G",
+    "key2": "P"
+  },
+  {
+    "code": "Vcs.Show.Shelf",
+    "key1": "G",
+    "key2": "V"
+  },
+  {
+    "code": "Vcs.ShowTabbedFileHistory",
+    "key1": "G",
+    "key2": "H"
+  },
+  {
+    "code": "Vcs.UpdateProject",
+    "key1": "G",
+    "key2": "U"
+  },
+  {
+    "code": "CallHierarchy",
+    "key1": "H",
+    "key2": "C"
+  },
+  {
+    "code": "MethodHierarchy",
+    "key1": "H",
+    "key2": "M"
+  },
+  {
+    "code": "TypeHierarchy",
+    "key1": "H",
+    "key2": "T"
+  },
+  {
+    "code": "EditorContextInfo",
+    "key1": "I",
+    "key2": "C"
+  },
+  {
+    "code": "ExpressionTypeInfo",
+    "key1": "I",
+    "key2": "T"
+  },
+  {
+    "code": "ParameterInfo",
+    "key1": "I",
+    "key2": "P"
+  },
+  {
+    "code": "MoveElementLeft",
+    "key1": "X",
+    "key2": "H"
+  },
+  {
+    "code": "MoveElementRight",
+    "key1": "X",
+    "key2": "L"
+  },
+  {
+    "code": "MoveStatementDown",
+    "key1": "X",
+    "key2": "J"
+  },
+  {
+    "code": "MoveStatementUp",
+    "key1": "X",
+    "key2": "K"
+  },
+  {
+    "code": "$Copy",
+    "key1": "C",
+    "key2": "C"
+  },
+  {
+    "code": "$Cut",
+    "key1": "X",
+    "key2": "X"
+  },
+  {
+    "code": "$Paste",
+    "key1": "V",
+    "key2": "V"
+  },
+  {
+    "code": "$SelectAll"
+  },
+  {
+    "code": "SaveAll"
+  },
+  {
+    "code": "FileStructurePopup",
+    "key1": "V",
+    "key2": "S"
+  },
+  {
+    "code": "GotoDeclaration",
+    "key1": "V",
+    "key2": "D"
+  },
+  {
+    "code": "GotoImplementation",
+    "key1": "V",
+    "key2": "I"
+  },
+  {
+    "code": "GotoSuperMethod",
+    "key1": "V",
+    "key2": "U"
+  },
+  {
+    "code": "GotoTest",
+    "key1": "V",
+    "key2": "T"
+  },
+  {
+    "code": "GotoTypeDeclaration",
+    "key1": "V",
+    "key2": "P"
+  },
+  {
+    "code": "RecentLocations",
+    "key1": "V",
+    "key2": "R"
+  },
+  {
+    "code": "NewClass",
+    "key1": "N",
+    "key2": "J",
+    "ide": "IntelliJ"
+  },
+  {
+    "code": "NewDir",
+    "key1": "N",
+    "key2": "D"
+  },
+  {
+    "code": "NewFile",
+    "key1": "N",
+    "key2": "F"
+  },
+  {
+    "code": "NewHtmlFile",
+    "key1": "N",
+    "key2": "H",
+    "ide": "WebStorm"
+  },
+  {
+    "code": "NewJavaScriptFile",
+    "key1": "N",
+    "key2": "J",
+    "ide": "WebStorm"
+  },
+  {
+    "code": "NewProject",
+    "key1": "N",
+    "key2": "N"
+  },
+  {
+    "code": "NewStylesheetFile",
+    "key1": "N",
+    "key2": "S",
+    "ide": "WebStorm"
+  },
+  {
+    "code": "NewTypeScriptFile",
+    "key1": "N",
+    "key2": "T",
+    "ide": "Webstorm"
+  },
+  {
+    "code": "NewPythonFile",
+    "key1": "N",
+    "key2": "P",
+    "ide": "PyCharm"
+  },
+  {
+    "code": "GotoClass",
+    "key1": "O",
+    "key2": "C"
+  },
+  {
+    "code": "GotoFile",
+    "key1": "O",
+    "key2": "F"
+  },
+  {
+    "code": "GotoSymbol",
+    "key1": "O",
+    "key2": "S"
+  },
+  {
+    "code": "OpenFile",
+    "key1": "O",
+    "key2": "O"
+  },
+  {
+    "code": "RecentFiles",
+    "key1": "O",
+    "key2": "R"
+  },
+  {
+    "code": "RecentProjectListGroup",
+    "key1": "O",
+    "key2": "P"
+  },
+  {
+    "code": "ReopenClosedTab",
+    "key1": "O",
+    "key2": "T"
+  },
+  {
+    "code": "Android.Designer.AutoArrange",
+    "ide": "IntelliJ"
+  },
+  {
+    "code": "ChangesView.Move"
+  },
+  {
+    "code": "CompareTwoFiles"
+  },
+  {
+    "code": "DatabaseView.PropertiesAction",
+    "ide": "IntelliJ"
+  },
+  {
+    "code": "Diff.ShowDiff"
+  },
+  {
+    "code": "EditorDuplicate"
+  },
+  {
+    "code": "FileChooser.GotoDesktop"
+  },
+  {
+    "code": "FileChooser.NewFolder"
+  },
+  {
+    "code": "GotoAction"
+  },
+  {
+    "code": "GotoLine"
+  },
+  {
+    "code": "Jdbc.OpenConsole.New"
+  },
+  {
+    "code": "Jdbc.OpenConsole.New.Generate"
+  },
+  {
+    "code": "MinimizeCurrentWindow"
+  },
+  {
+    "code": "NewElement"
+  },
+  {
+    "code": "org.intellij.plugins.markdown.ui.actions.styling.InsertImageAction"
+  },
+  {
+    "code": "org.intellij.plugins.markdown.ui.actions.styling.ToggleBoldAction"
+  },
+  {
+    "code": "org.intellij.plugins.markdown.ui.actions.styling.ToggleItalicAction"
+  },
+  {
+    "code": "Refresh"
+  },
+  {
+    "code": "Rerun"
+  },
+  {
+    "code": "SendEOF"
+  },
+  {
+    "code": "SwitcherIterateItems"
+  },
+  {
+    "code": "SwitcherRecentEditedChangedToggleCheckBox"
+  },
+  {
+    "code": "Vcs.Log.FocusTextFilter"
+  },
+  {
+    "code": "Vcs.MoveChangedLinesToChangelist"
+  },
+  {
+    "code": "CodeCompletion"
+  },
+  {
+    "code": "ChangesView.SetDefault"
+  },
+  {
+    "code": "Back",
+    "key1": "[",
+    "key2": "L"
+  },
+  {
+    "code": "Forward",
+    "key1": "]",
+    "key2": "L"
+  },
+  {
+    "code": "Diff.PrevChange",
+    "key1": "[",
+    "key2": "Y"
+  },
+  {
+    "code": "Diff.NextChange",
+    "key1": "]",
+    "key2": "Y"
+  },
+  {
+    "code": "FindPrevious",
+    "key1": "[",
+    "key2": "O"
+  },
+  {
+    "code": "FindNext",
+    "key1": "]",
+    "key2": "O"
+  },
+  {
+    "code": "GotoPreviousBookmarkInEditor",
+    "key1": "[",
+    "key2": "M"
+  },
+  {
+    "code": "GotoNextBookmarkInEditor",
+    "key1": "]",
+    "key2": "M"
+  },
+  {
+    "code": "GotoPrevElementUnderCaretUsage",
+    "key1": "[",
+    "key2": "U"
+  },
+  {
+    "code": "GotoNextElementUnderCaretUsage",
+    "key1": "]",
+    "key2": "U"
+  },
+  {
+    "code": "GotoPreviousError",
+    "key1": "[",
+    "key2": "R"
+  },
+  {
+    "code": "GotoNextError",
+    "key1": "]",
+    "key2": "R"
+  },
+  {
+    "code": "JumpToLastChange",
+    "key1": "[",
+    "key2": "E"
+  },
+  {
+    "code": "JumpToNextChange",
+    "key1": "]",
+    "key2": "E"
+  },
+  {
+    "code": "MethodDown",
+    "key1": "[",
+    "key2": "F"
+  },
+  {
+    "code": "MethodUp",
+    "key1": "]",
+    "key2": "F"
+  },
+  {
+    "code": "PreviousDiff",
+    "key1": "[",
+    "key2": "Z"
+  },
+  {
+    "code": "NextDiff",
+    "key1": "]",
+    "key2": "Z"
+  },
+  {
+    "code": "PreviousTab",
+    "key1": "[",
+    "key2": "["
+  },
+  {
+    "code": "NextTab",
+    "key1": "]",
+    "key2": "]"
+  },
+  {
+    "code": "PrevSplitter",
+    "key1": "[",
+    "key2": "S"
+  },
+  {
+    "code": "NextSplitter",
+    "key1": "]",
+    "key2": "S"
+  },
+  {
+    "code": "VcsShowPrevChangeMarker",
+    "key1": "[",
+    "key2": "C"
+  },
+  {
+    "code": "VcsShowNextChangeMarker",
+    "key1": "]",
+    "key2": "C"
+  },
+  {
+    "code": "ChangeSignature",
+    "key1": "T",
+    "key2": "S"
+  },
+  {
+    "code": "CopyElement",
+    "key1": "T",
+    "key2": "C"
+  },
+  {
+    "code": "ExtractMethod",
+    "key1": "T",
+    "key2": "M"
+  },
+  {
+    "code": "Inline",
+    "key1": "T",
+    "key2": "I"
+  },
+  {
+    "code": "IntroduceConstant",
+    "key1": "T",
+    "key2": "N"
+  },
+  {
+    "code": "IntroduceField",
+    "key1": "T",
+    "key2": "F"
+  },
+  {
+    "code": "IntroduceParameter",
+    "key1": "T",
+    "key2": "P"
+  },
+  {
+    "code": "IntroduceVariable",
+    "key1": "T",
+    "key2": "V"
+  },
+  {
+    "code": "InvertBoolean",
+    "key1": "T",
+    "key2": "B"
+  },
+  {
+    "code": "Move",
+    "key1": "T",
+    "key2": "X"
+  },
+  {
+    "code": "RenameElement",
+    "key1": "T",
+    "key2": "R"
+  },
+  {
+    "code": "RenameFile",
+    "key1": "T",
+    "key2": "L"
+  },
+  {
+    "code": "SafeDelete",
+    "key1": "T",
+    "key2": "D"
+  },
+  {
+    "code": "ChooseDebugConfiguration",
+    "key1": "R",
+    "key2": "D"
+  },
+  {
+    "code": "ChooseRunConfiguration",
+    "key1": "R",
+    "key2": "R"
+  },
+  {
+    "code": "CompileDirty",
+    "key1": "R",
+    "key2": "B"
+  },
+  {
+    "code": "Debug",
+    "key1": "R",
+    "key2": "G"
+  },
+  {
+    "code": "editRunConfigurations",
+    "key1": "R",
+    "key2": "E"
+  },
+  {
+    "code": "Run",
+    "key1": "R",
+    "key2": "L"
+  },
+  {
+    "code": "Stop",
+    "key1": "R",
+    "key2": "S"
+  },
+  {
+    "code": "MoveTabRight",
+    "key1": "S",
+    "key2": "M"
+  },
+  {
+    "code": "SplitVertically",
+    "key1": "S",
+    "key2": "S"
+  },
+  {
+    "code": "Unsplit",
+    "key1": "S",
+    "key2": "U"
+  },
+  {
+    "code": "UnsplitAll",
+    "key1": "S",
+    "key2": "A"
+  },
+  {
+    "code": "FindUsages",
+    "key1": "U",
+    "key2": "P"
+  },
+  {
+    "code": "FindUsagesInFile",
+    "key1": "U",
+    "key2": "F"
+  },
+  {
+    "code": "ShowRecentFindUsagesGroup",
+    "key1": "U",
+    "key2": "R"
+  },
+  {
+    "code": "ShowUsages",
+    "key1": "U",
+    "key2": "U"
+  }
+]
