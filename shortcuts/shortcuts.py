@@ -7,8 +7,7 @@ from cac.io.xml.xml_element import XmlElement
 from cac.io.xml.xml_writer import XmlWriter
 from cac.path.directory import Directory
 from cac.path.file import File
-from cac.regex import Regex
-from cac.sorter import ListSorter
+from ide import IDES, Ide, get_ide_subdirectory, has_ide
 
 @dataclass
 class Shortcut:
@@ -21,22 +20,12 @@ class Modifier(StrEnum):
     META = auto()
     CTRL = auto()
 
-class Ide(StrEnum):
-    INTELLIJ = 'IntelliJ'
-    WEBSTORM = 'WebStorm'
-    PYCHARM = 'PyCharm'
-
 MODIFIERS: List[Modifier] = [Modifier.META, Modifier.CTRL]
-IDES: List[Ide] = [Ide.INTELLIJ, Ide.WEBSTORM, Ide.PYCHARM]
 
 SYMBOLS: Dict[str, str] = {'[': 'open_bracket', ']': 'close_bracket', '-': 'minus', '=': 'equals'}
 
 PLATFORMS: Dict[Modifier, str] = {Modifier.META: 'Mac', Modifier.CTRL: 'Windows'}
 PARENTS: Dict[Modifier, str] = {Modifier.META: 'Mac OS X 10.5+', Modifier.CTRL: '$default'}
-
-def has_ide(ide: Ide) -> bool:
-    ide_directories: List[Directory] = get_ide_directories(ide)
-    return len(ide_directories) > 0
 
 def is_applicable(shortcut: Shortcut, ide: Ide) -> bool:
     return len(shortcut.ide) == 0 or shortcut.ide == ide.value
@@ -63,24 +52,12 @@ def create_keymap(actions: List[XmlElement], modifier: Modifier) -> XmlElement:
 def get_platform_directory(modifier: Modifier, ide: Ide) -> Directory:
     if modifier == Modifier.CTRL:
         return Directory.get_cwd()
-    return get_keymap_directory(ide)
+    return get_ide_subdirectory(ide, 'keymaps')
 
 def get_platform_file(directory: Directory, modifier: Modifier, ide: Ide) -> File:
     if modifier == Modifier.META:
         return directory.join_file('CAC.xml')
     return directory.join_file('CAC {ide}.xml'.format(ide=ide))
-
-def get_keymap_directory(ide: Ide) -> Directory:
-    ide_directories: List[Directory] = get_ide_directories(ide)
-    sorted_ide_directories: List[Directory] = ListSorter.sort(ide_directories, lambda directory: directory.name)
-    latest_ide_directory: Directory = sorted_ide_directories[-1]
-    return latest_ide_directory.join_directory('keymaps')
-
-def get_ide_directories(ide: Ide) -> List[Directory]:
-    jetbrains_directory: Directory = Directory.get_home().join_directories(
-        ['Library', 'Application Support', 'JetBrains'])
-    ide_regex: Regex = Regex(r'^{ide}'.format(ide=ide))
-    return jetbrains_directory.find_directories(regex=ide_regex)
 
 ides: List[Ide] = [ide for ide in IDES if has_ide(ide)]
 reader: JsonReader = JsonReader('shortcuts.json')
