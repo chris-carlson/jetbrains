@@ -51,7 +51,8 @@ def create_keyboard_shortcut(shortcut: Shortcut, modifier: Modifier) -> Optional
         key1: str = SYMBOLS[shortcut.key1] if shortcut.key1 in SYMBOLS else shortcut.key1.lower()
         keystrokes: Dict[str, str] = {'first-keystroke': '{modifier} {key}'.format(modifier=modifier.value, key=key1)}
         if len(shortcut.key2) > 0:
-            keystrokes['second-keystroke'] = shortcut.key2.lower()
+            key2: str = SYMBOLS[shortcut.key2] if shortcut.key2 in SYMBOLS else shortcut.key2.lower()
+            keystrokes['second-keystroke'] = key2
         return XmlElement('keyboard-shortcut', keystrokes)
     return None
 
