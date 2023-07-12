@@ -57,7 +57,7 @@ def get_platform_directory(modifier: Modifier, ide: Ide) -> Directory:
 def get_platform_file(directory: Directory, modifier: Modifier, ide: Ide) -> File:
     if modifier == Modifier.META:
         return directory.join_file('CAC.xml')
-    return directory.join_file('CAC {ide}.xml'.format(ide=ide))
+    return directory.join_file(ide.name, '.xml')
 
 ides: List[Ide] = [ide for ide in IDES if has_ide(ide)]
 reader: JsonReader = JsonReader('shortcuts.json')
