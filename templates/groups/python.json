@@ -1,0 +1,1276 @@
+[
+  {
+    "name": "class",
+    "description": "class definition",
+    "value": "class $NAME$:",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "capitalize(camelCase(fileNameWithoutExtension()))",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "classe",
+    "description": "extended class definition",
+    "value": "class $NAME$($EXTENSION$):",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "capitalize(camelCase(fileNameWithoutExtension()))",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXTENSION",
+        "expression": "",
+        "default_value": "\"NamedTuple\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "and",
+    "description": "and condition",
+    "value": "$CONDITION1$ and $CONDITION2$",
+    "variables": [
+      {
+        "name": "CONDITION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "CONDITION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "eq",
+    "description": "positive equality check",
+    "value": "$EXPRESSION1$ == $EXPRESSION2$",
+    "variables": [
+      {
+        "name": "EXPRESSION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "for",
+    "description": "for loop",
+    "value": "for $ITEM$ in $COLLECTION$:",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "\"_\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ford",
+    "description": "dict for loop",
+    "value": "for $KEY$, $VALUE$ in $COLLECTION$.items():",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "KEY",
+        "expression": "",
+        "default_value": "\"_\"",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"_\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "if",
+    "description": "if statement",
+    "value": "if $CONDITION$:",
+    "variables": [
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ife",
+    "description": "if else statement",
+    "value": "if $CONDITION$:\n\t$BODY1$\nelse:\n\t$BODY2$",
+    "variables": [
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "BODY1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "BODY2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "in",
+    "description": "in condition",
+    "value": "$VARIABLE$ in $COLLECTION$",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "isn",
+    "description": "positive none check",
+    "value": "$VARIABLE$ is None",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "isnn",
+    "description": "negative none check",
+    "value": "$VARIABLE$ is not None",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "lene",
+    "description": "length equality check",
+    "value": "len($COLLECTION$) == $VALUE$",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"0\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "leng",
+    "description": "length greater than check",
+    "value": "len($COLLECTION$) > $VALUE$",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"0\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "lenn",
+    "description": "length non-equality check",
+    "value": "len($COLLECTION$) != $VALUE$",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"0\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "neq",
+    "description": "negative equality check",
+    "value": "$EXPRESSION1$ != $EXPRESSION2$",
+    "variables": [
+      {
+        "name": "EXPRESSION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "nin",
+    "description": "not in condition",
+    "value": "$VARIABLE$ not in $COLLECTION$",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "or",
+    "description": "or condition",
+    "value": "$CONDITION1$ or $CONDITION2$",
+    "variables": [
+      {
+        "name": "CONDITION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "CONDITION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "raise",
+    "description": "raise exception",
+    "value": "raise $ERROR$('$MESSAGE$')",
+    "variables": [
+      {
+        "name": "ERROR",
+        "expression": "",
+        "default_value": "\"ValueError\"",
+        "always_stop": true
+      },
+      {
+        "name": "MESSAGE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "range",
+    "description": "range for loop",
+    "value": "for $INDEX$ in range($VALUE1$, $VALUE2$):",
+    "variables": [
+      {
+        "name": "INDEX",
+        "expression": "",
+        "default_value": "\"index\"",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE1",
+        "expression": "",
+        "default_value": "\"0\"",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "rangel",
+    "description": "list range for loop",
+    "value": "for $INDEX$ in range($VALUE$, len($COLLECTION$)):",
+    "variables": [
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"0\"",
+        "always_stop": true
+      },
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "INDEX",
+        "expression": "",
+        "default_value": "\"index\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ter",
+    "description": "ternary statement",
+    "value": "$VALUE1$ if $CONDITION$ else $VALUE2$",
+    "variables": [
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "while",
+    "description": "while loop",
+    "value": "while $CONDITION$:",
+    "variables": [
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "def",
+    "description": "function definition",
+    "value": "def $NAME$($PARAMETERS$) -> $TYPE$:",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"None\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "defi",
+    "description": "init function definition",
+    "value": "def __init__(self) -> None:",
+    "variables": []
+  },
+  {
+    "name": "defip",
+    "description": "init function definition with parameters",
+    "value": "def __init__(self, $PARAMETERS$) -> None:",
+    "variables": [
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "defs",
+    "description": "self function definition",
+    "value": "def $NAME$(self) -> $TYPE$:",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"None\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "defsp",
+    "description": "self function definition with parameters",
+    "value": "def $NAME$(self, $PARAMETERS$) -> $TYPE$:",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"None\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "deft",
+    "description": "static function definition",
+    "value": "@staticmethod\ndef $NAME$($PARAMETERS$) -> $TYPE$:",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"None\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "defu",
+    "description": "underscore function definition",
+    "value": "def __$NAME$__(self) -> $TYPE$:",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"None\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "defup",
+    "description": "underscore function definition",
+    "value": "def __$NAME$__(self, $PARAMETERS$) -> $TYPE$:",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"None\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "get",
+    "description": "getter function definition",
+    "value": "@property\ndef $VARIABLE$(self) -> $TYPE$:\n\treturn self._$VARIABLE$",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"None\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "join",
+    "description": "join function call",
+    "value": "'$SEPARATOR$'.join($VARIABLE$)",
+    "variables": [
+      {
+        "name": "SEPARATOR",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "lamb",
+    "description": "lambda expression",
+    "value": "lambda $NAME$: $EXPRESSION$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "par",
+    "description": "parameter definition",
+    "value": "$NAME$: $TYPE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "pard",
+    "description": "default parameter definition",
+    "value": "$NAME$: $TYPE$ = $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"None\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ret",
+    "description": "return statement",
+    "value": "return $EXPRESSION$",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "set",
+    "description": "setter function definition",
+    "value": "@$VARIABLE$.setter\ndef $VARIABLE$(self, $VARIABLE$: $TYPE$) -> None:\n\tself._$VARIABLE$ = $VARIABLE$",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "sf",
+    "description": "self function",
+    "value": "self.$NAME$($PARAMETERS$)",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "sfp",
+    "description": "self private function",
+    "value": "self._$NAME$($PARAMETERS$)",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "bc",
+    "description": "block comment",
+    "value": "\"\"\"\n$COMMENT$\n\"\"\"",
+    "variables": [
+      {
+        "name": "COMMENT",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "pr",
+    "description": "print statement",
+    "value": "print($EXPRESSION$)",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "prm",
+    "description": "print message",
+    "value": "print('$MESSAGE$')",
+    "variables": [
+      {
+        "name": "MESSAGE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "prmv",
+    "description": "print message and variable",
+    "value": "print('$MESSAGE$: {value}'.format(value=str($VARIABLE$)))",
+    "variables": [
+      {
+        "name": "MESSAGE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "prv",
+    "description": "print variable",
+    "value": "print('$NAME$: {value}'.format(value=str($VARIABLE$)))",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "VARIABLE",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "dicta",
+    "description": "dict assignment",
+    "value": "{$KEY$: $VALUE$ for $ITEM$ in $COLLECTION$}",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "KEY",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "dictc",
+    "description": "conditional dict assignment",
+    "value": "{$KEY$: $VALUE$ for $ITEM$ in $COLLECTION$ if $CONDITION$}",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "KEY",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "dicti",
+    "description": "dict initialization",
+    "value": "$NAME$: Dict[$TYPE$] = $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"{}\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "lista",
+    "description": "list assignment",
+    "value": "[$EXPRESSION$ for $ITEM$ in $COLLECTION$]",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "listc",
+    "description": "conditional list assignment",
+    "value": "[$EXPRESSION$ for $ITEM$ in $COLLECTION$ if $CONDITION$]",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "listi",
+    "description": "list initialization",
+    "value": "$NAME$: List[$TYPE$] = $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"[]\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "raw",
+    "description": "raw string",
+    "value": "r'$STRING$'",
+    "variables": [
+      {
+        "name": "STRING",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "seta",
+    "description": "set assignment",
+    "value": "{$EXPRESSION$ for $ITEM$ in $COLLECTION$}",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "setc",
+    "description": "conditional set assignment",
+    "value": "{$EXPRESSION$ for $ITEM$ in $COLLECTION$ if $CONDITION$}",
+    "variables": [
+      {
+        "name": "COLLECTION",
+        "expression": "pyIterableVariable()",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "seti",
+    "description": "set initialization",
+    "value": "$NAME$: Set[$TYPE$] = $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "\"set()\"",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "sv",
+    "description": "self variable",
+    "value": "self._$NAME$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "type",
+    "description": "type variable",
+    "value": "$TYPE$ = TypeVar('$TYPE$')",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "vara",
+    "description": "variable assignment",
+    "value": "$NAME$ = $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "varc",
+    "description": "constructor variable initialization",
+    "value": "$NAME$: $TYPE$ = $TYPE$($PARAMETERS$)",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "vari",
+    "description": "variable initialization",
+    "value": "$NAME$: $TYPE$ = $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "varsa",
+    "description": "self variable assignment",
+    "value": "self._$NAME$ = $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "varsc",
+    "description": "self constructor variable initialization",
+    "value": "self._$NAME$: $TYPE$ = $TYPE$($PARAMETERS$)",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "varsi",
+    "description": "self variable initialization",
+    "value": "self._$NAME$: $TYPE$ = $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "varsp",
+    "description": "self parameter variable initialization",
+    "value": "self._$NAME$: $TYPE$ = $NAME$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  }
+]

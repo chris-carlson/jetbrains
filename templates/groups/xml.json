@@ -1,0 +1,98 @@
+[
+  {
+    "name": "t",
+    "description": "single-line tag with no attributes",
+    "value": "<$NAME$>$END$</$NAME$>",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ta",
+    "description": "single-line tag with attributes",
+    "value": "<$NAME$ $ATTRIBUTES$>$END$</$NAME$>",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ATTRIBUTES",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "tm",
+    "description": "multi-line tag with no attributes",
+    "value": "<$NAME$>\n  $END$\n</$NAME$>",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "tam",
+    "description": "multi-line tag with attributes",
+    "value": "<$NAME$ $ATTRIBUTES$>\n  $END$\n</$NAME$>",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ATTRIBUTES",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "a",
+    "description": "attribute",
+    "value": "$NAME$=\"$VALUE$\"",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "comp",
+    "description": "compiler settings",
+    "value": "<properties>\n  <maven.compiler.source>$VERSION$</maven.compiler.source>\n  <maven.compiler.target>$VERSION$</maven.compiler.target>\n</properties>",
+    "variables": [
+      {
+        "name": "VERSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  }
+]

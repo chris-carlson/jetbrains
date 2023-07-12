@@ -1,0 +1,268 @@
+[
+  {
+    "name": "tag",
+    "description": "tag declaration",
+    "value": "<$NAME$>$END$</$NAME$>",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "taga",
+    "description": "tag declaration with attribute",
+    "value": "<$NAME$ $ATTRIBUTES$>$END$</$NAME$>",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "ATTRIBUTES",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "att",
+    "description": "attribute",
+    "value": "$NAME$=\"$VALUE$\"",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "ngi",
+    "description": "ng if directive",
+    "value": "*ngIf=\"$VALUE$\"",
+    "variables": [
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "matb",
+    "description": "angular material button",
+    "value": "<button $TYPE$>$NAME$</button>",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"mat-raised-button\"",
+        "always_stop": false
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "matbl",
+    "description": "angular material button link",
+    "value": "<a $TYPE$ routerLink=\"$ROUTE$\">$NAME$</a>",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"mat-raised-button\"",
+        "always_stop": false
+      },
+      {
+        "name": "ROUTE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "matbi",
+    "description": "angular material icon button",
+    "value": "<button mat-icon-button>\n\t<mat-icon>$NAME$</mat-icon>\n</button>",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "mati",
+    "description": "angular material input",
+    "value": "<mat-form-field>\n\t<input matInput placeholder=\"$TEXT$\" type=\"$TYPE$\"/>\n</mat-form-field>",
+    "variables": [
+      {
+        "name": "TEXT",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "mats",
+    "description": "angular material select",
+    "value": "<mat-form-field>\n\t<mat-select placeholder=\"$TEXT$\">\n\t\t<mat-option *ngFor=\"let $ITEM$ of $ARRAY$\" [value]=\"$VALUE$\">$TEXT$</mat-option>\n\t</mat-select>\n</mat-form-field>",
+    "variables": [
+      {
+        "name": "TEXT",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "ARRAY",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "matl",
+    "description": "angular material list",
+    "value": "<mat-list>\n\t<mat-list-item>$END$</mat-list-item>\n</mat-list>",
+    "variables": []
+  },
+  {
+    "name": "mattb",
+    "description": "angular material toolbar",
+    "value": "<mat-toolbar color=\"primary\">$END$</mat-toolbar>",
+    "variables": []
+  },
+  {
+    "name": "matc",
+    "description": "angular material card",
+    "value": "<mat-card>\n\t<mat-card-title>$TITLE$</mat-card-title>\n\t<mat-card-content>\n\t\t$END$\n\t</mat-card-content>\n</mat-card>\n",
+    "variables": [
+      {
+        "name": "TITLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "matln",
+    "description": "angular material navigation list",
+    "value": "<mat-nav-list>\n\t<a mat-list-item routerLink=\"$ROUTE$\">$TEXT$</a>\n</mat-nav-list>",
+    "variables": [
+      {
+        "name": "ROUTE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TEXT",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "mattg",
+    "description": "angular material tab group",
+    "value": "<mat-tab-group>\n\t<mat-tab label=\"$LABL$\">$END$</mat-tab>\n</mat-tab-group>\n",
+    "variables": [
+      {
+        "name": "LABL",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "matd",
+    "description": "angular material dialog",
+    "value": "<h2 mat-dialog-title>$TITLE$</h2>\n<mat-dialog-content>$END$</mat-dialog-content>\n<mat-dialog-actions>\n\t<button $TYPE$ mat-dialog-close>Close</button>\n</mat-dialog-actions>\n",
+    "variables": [
+      {
+        "name": "TITLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"mat-raised-button\"",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "ngf",
+    "description": "ng for directive",
+    "value": "*ngFor=\"let $ITEM$ of $ARRAY$\"",
+    "variables": [
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "ARRAY",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  }
+]

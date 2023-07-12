@@ -1,0 +1,21 @@
+[
+  {
+    "name": "pair",
+    "description": "pair declaration",
+    "value": "\"$KEY$\": $VALUE$",
+    "variables": [
+      {
+        "name": "KEY",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  }
+]

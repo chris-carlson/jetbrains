@@ -1,0 +1,733 @@
+[
+  {
+    "name": "const",
+    "description": "constant variable initialization",
+    "value": "const $NAME$: $TYPE$ = $VALUE$;",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "vara",
+    "description": "variable assignment",
+    "value": "$NAME$ = $VALUE$;",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "let",
+    "description": "non-constant variable initialization",
+    "value": "let $NAME$: $TYPE$ = $VALUE$;",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "vart",
+    "description": "instance variable assignment",
+    "value": "this.$NAME$ = $VALUE$;",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "fun",
+    "description": "function definition",
+    "value": "$NAME$($PARAMETERS$): $TYPE$ {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "anon",
+    "description": "single-line anonymous function",
+    "value": "($PARAMETERS$) => $END$",
+    "variables": [
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "anonm",
+    "description": "multi-line anonymous function",
+    "value": "($PARAMETERS$) => {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "ret",
+    "description": "return statement",
+    "value": "return $VALUE$;",
+    "variables": [
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "if",
+    "description": "if statement",
+    "value": "if ($EXPRESSION$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "ife",
+    "description": "if else statement",
+    "value": "if ($EXPRESSION$) {\n\t$BODY1$\n} else {\n\t$BODY2$\n}",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "BODY1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "BODY2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "while",
+    "description": "while loop",
+    "value": "while ($EXPRESSION$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "for",
+    "description": "for loop",
+    "value": "for (let $NAME$ = $START_INDEX$; $NAME$ < $END_INDEX$; $NAME$++) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "START_INDEX",
+        "expression": "",
+        "default_value": "\"0\"",
+        "always_stop": false
+      },
+      {
+        "name": "END_INDEX",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "eq",
+    "description": "equality check",
+    "value": "$VALUE1$ === $VALUE2$",
+    "variables": [
+      {
+        "name": "VALUE1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "ne",
+    "description": "negative equality check",
+    "value": "$VALUE1$ !== $VALUE2$",
+    "variables": [
+      {
+        "name": "VALUE1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "and",
+    "description": "and condition",
+    "value": "$EXPRESSION1$ && $EXPRESSION2$",
+    "variables": [
+      {
+        "name": "EXPRESSION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "EXPRESSION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "or",
+    "description": "or condition",
+    "value": "$EXPRESSION1$ || $EXPRESSION2$",
+    "variables": [
+      {
+        "name": "EXPRESSION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "EXPRESSION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "class",
+    "description": "class definition",
+    "value": "export class $NAME$ {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "capitalize(camelCase(fileNameWithoutExtension()))",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "ext",
+    "description": "extends statement",
+    "value": "extends $CLASS$",
+    "variables": [
+      {
+        "name": "CLASS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "imp",
+    "description": "implements statement",
+    "value": "implements $CLASS$",
+    "variables": [
+      {
+        "name": "CLASS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "con",
+    "description": "constructor definition",
+    "value": "constructor($PARAMETERS$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "clog",
+    "description": "log statement",
+    "value": "console.log($VALUE$);",
+    "variables": [
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "clogv",
+    "description": "log variable",
+    "value": "console.log(`$LABEL$: ${JSON.stringify($VALUE$)}`);",
+    "variables": [
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "LABEL",
+        "expression": "",
+        "default_value": "VALUE",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "clogmv",
+    "description": "log message and variable",
+    "value": "console.log(`$MESSAGE$: ${JSON.stringify($VALUE$)}`);",
+    "variables": [
+      {
+        "name": "MESSAGE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "clogm",
+    "description": "log message",
+    "value": "console.log('$MESSAGE$');",
+    "variables": [
+      {
+        "name": "MESSAGE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "json",
+    "description": "json stringify",
+    "value": "JSON.stringify($VALUE$);",
+    "variables": [
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "varn",
+    "description": "instance variable",
+    "value": "$NAME$: $TYPE$;",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "par",
+    "description": "parameter",
+    "value": "$NAME$: $TYPE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "pars",
+    "description": "service parameter",
+    "value": "$VISIBILITY$ $NAME$: $TYPE$",
+    "variables": [
+      {
+        "name": "VISIBILITY",
+        "expression": "",
+        "default_value": "\"private\"",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "NAME",
+        "expression": "camelCase(TYPE)",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "route",
+    "description": "component route definition",
+    "value": "{\n\tpath: '$PATH$',\n\tcomponent: $COMPONENT$\n}",
+    "variables": [
+      {
+        "name": "PATH",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "COMPONENT",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "router",
+    "description": "redirect route definition",
+    "value": "{\n\tpath: '',\n\tredirectTo: '/$PATH$',\n\tpathMatch: 'full'\n}",
+    "variables": [
+      {
+        "name": "PATH",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "input",
+    "description": "input declaration",
+    "value": "@Input() $NAME$: $TYPE$;",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "event",
+    "description": "event emitter declaration",
+    "value": "@Output() $NAME$: EventEmitter<$TYPE$> = new EventEmitter();",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "int",
+    "description": "interface definition",
+    "value": "export interface $NAME$ {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "capitalize(camelCase(fileNameWithoutExtension()))",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "enum",
+    "description": "enu definition",
+    "value": "export enum $NAME$ {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "capitalize(camelCase(fileNameWithoutExtension()))",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "spy",
+    "description": "spy service",
+    "value": "let $NAME$: jasmine.SpyObj<$TYPE$>;",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "NAME",
+        "expression": "camelCase(TYPE)",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "prov",
+    "description": "provide",
+    "value": "{\n\tprovide: $TYPE$,\n\tuseValue: jasmine.createSpyObj('$NAME$', ['$METHOD$'])\n}",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "NAME",
+        "expression": "camelCase(TYPE)",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "METHOD",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "inj",
+    "description": "inject mock",
+    "value": "$NAME$ = TestBed.inject($TYPE$) as jasmine.SpyObj<$TYPE$>;",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "NAME",
+        "expression": "camelCase(TYPE)",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "funp",
+    "description": "private function definition",
+    "value": "private $NAME$($PARAMETERS$): $TYPE$ {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "it",
+    "description": "test case",
+    "value": "it('$DESCRIPTION$', () => {\n  $END$\n});",
+    "variables": [
+      {
+        "name": "DESCRIPTION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "etb",
+    "description": "expect to be",
+    "value": "expect($VARIABLE$).toBe($VALUE$);",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "ete",
+    "description": "expect to equal",
+    "value": "expect($VARIABLE$).toEqual($VALUE$);",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  }
+]

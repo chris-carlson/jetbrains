@@ -1,0 +1,21 @@
+[
+  {
+    "name": "prop",
+    "description": "property",
+    "value": "$NAME$: $VALUE$",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  }
+]

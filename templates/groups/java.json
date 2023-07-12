@@ -1,0 +1,820 @@
+[
+  {
+    "name": "con",
+    "description": "constructor",
+    "value": "public $NAME$($PARAMETERS$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "className()",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "conp",
+    "description": "private constructor",
+    "value": "private $NAME$() {\n}",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "className()",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "!=",
+    "description": "negative double equals check",
+    "value": "$EXPRESSION1$ != $EXPRESSION2$",
+    "variables": [
+      {
+        "name": "EXPRESSION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "&&",
+    "description": "and condition",
+    "value": "$CONDITION1$ && $CONDITION2$",
+    "variables": [
+      {
+        "name": "CONDITION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "CONDITION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "==",
+    "description": "double equals check",
+    "value": "$EXPRESSION1$ == $EXPRESSION2$",
+    "variables": [
+      {
+        "name": "EXPRESSION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "case",
+    "description": "case statement",
+    "value": "case $VALUE$:\n\t$END$\n\tbreak;",
+    "variables": [
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "casef",
+    "description": "case statement with fall-through",
+    "value": "case $VALUE$:\n\t$END$",
+    "variables": [
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "eq",
+    "description": "equality check",
+    "value": "$EXPRESSION1$.equals($EXPRESSION2$)",
+    "variables": [
+      {
+        "name": "EXPRESSION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "for",
+    "description": "for statement",
+    "value": "for (int $VARIABLE$ = 0; $VARIABLE$ < $LIMIT$; $VARIABLE$++) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "\"i\"",
+        "always_stop": true
+      },
+      {
+        "name": "LIMIT",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "fore",
+    "description": "for each statement",
+    "value": "for ($TYPE$ $ITEM$ : $COLLECTION$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ITEM",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "COLLECTION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "if",
+    "description": "if statement",
+    "value": "if ($CONDITION$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ife",
+    "description": "if else statement",
+    "value": "if ($CONDITION$) {\n\t$IF$\n} else {\n\t$ELSE$\n}",
+    "variables": [
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "IF",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ELSE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "lamb",
+    "description": "lambda function",
+    "value": "$VARIABLE$ -> $EXPRESSION$",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "opt",
+    "description": "optional check",
+    "value": "if ($VARIABLE$.isPresent()) {\n\treturn $VARIABLE$.get();\n}",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "switch",
+    "description": "switch statement",
+    "value": "switch ($CONDITION$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "while",
+    "description": "while statement",
+    "value": "while ($CONDITION$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "CONDITION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "||",
+    "description": "or condition",
+    "value": "$CONDITION1$ || $CONDITION2$",
+    "variables": [
+      {
+        "name": "CONDITION1",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "CONDITION2",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "throw",
+    "description": "throw exception",
+    "value": "throw new $EXCEPTION$(\"$MESSAGE$\");",
+    "variables": [
+      {
+        "name": "EXCEPTION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "MESSAGE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "try",
+    "description": "try/catch statement",
+    "value": "try {\n\t$TRY$\n} catch ($EXCEPTION$ exception) {\n\t$CATCH$\n}",
+    "variables": [
+      {
+        "name": "TRY",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXCEPTION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "CATCH",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ase",
+    "description": "assertEquals statement",
+    "value": "assertEquals($EXPECTED$, $ACTUAL$);",
+    "variables": [
+      {
+        "name": "EXPECTED",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "ACTUAL",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "asf",
+    "description": "assertFalse statement",
+    "value": "assertFalse($EXPRESSION$);",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ast",
+    "description": "assertTrue statement",
+    "value": "assertTrue($EXPRESSION$);",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "inst",
+    "description": "JUnit instance variable declaration",
+    "value": "private $TYPE$ instance;",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "substringBefore(className(), \"Test\")",
+        "default_value": "",
+        "always_stop": false
+      }
+    ]
+  },
+  {
+    "name": "log",
+    "description": "logger initialization",
+    "value": "private static final org.apache.logging.log4j.Logger LOGGER = org.apache.logging.log4j.LogManager.getLogger();",
+    "variables": []
+  },
+  {
+    "name": "sys",
+    "description": "print statement",
+    "value": "System.out.println($EXPRESSION$);",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "sysm",
+    "description": "print statement with message",
+    "value": "System.out.println(\"$MESSAGE$: \" + $EXPRESSION$);",
+    "variables": [
+      {
+        "name": "MESSAGE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "sysv",
+    "description": "variable print statement",
+    "value": "System.out.println(\"$EXPRESSION$: \" + $EXPRESSION$);",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "call",
+    "description": "method call",
+    "value": "$EXPRESSION$($PARAMETERS$);",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "main",
+    "description": "main method declaration",
+    "value": "public static void main(String[] args) {\n\t$END$\n}",
+    "variables": []
+  },
+  {
+    "name": "meth",
+    "description": "method declaration",
+    "value": "$MODIFIER$ $TYPE$ $NAME$($PARAMETERS$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "MODIFIER",
+        "expression": "",
+        "default_value": "\"public\"",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"void\"",
+        "always_stop": true
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "meths",
+    "description": "static method declaration",
+    "value": "$MODIFIER$ static $TYPE$ $NAME$($PARAMETERS$) {\n\t$END$\n}",
+    "variables": [
+      {
+        "name": "MODIFIER",
+        "expression": "",
+        "default_value": "\"public\"",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "\"void\"",
+        "always_stop": true
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ret",
+    "description": "return statement",
+    "value": "return $EXPRESSION$;",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "mock",
+    "description": "mock class",
+    "value": "$TYPE$ $NAME$ = org.mockito.Mockito.mock($TYPE$.class);",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "ver",
+    "description": "verify statement",
+    "value": "org.mockito.Mockito.verify($VARIABLE$).$METHOD$;",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "METHOD",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "when",
+    "description": "when statement",
+    "value": "org.mockito.Mockito.when($VARIABLE$.$METHOD$($PARAMETERS$)).thenReturn($VALUE$);",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "METHOD",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "appe",
+    "description": "append variable to EqualsBuilder",
+    "value": ".append($VARIABLE$, other.$VARIABLE$)",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "apph",
+    "description": "append variable to HashCodeBuilder",
+    "value": ".append($VARIABLE$)",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "equals",
+    "description": "equals override",
+    "value": "@Override\npublic boolean equals(Object obj) {\n\tif (obj == null) {\n\t\treturn false;\n\t}\n\tif (obj == this) {\n\t\treturn true;\n\t}\n\tif (obj.getClass() != getClass()) {\n\t\treturn false;\n\t}\n\t$CLASS$ other = ($CLASS$) obj;\n\treturn new org.apache.commons.lang3.builder.EqualsBuilder().append($VARIABLE$, other.$VARIABLE$)$END$.isEquals();\n}",
+    "variables": [
+      {
+        "name": "CLASS",
+        "expression": "className()",
+        "default_value": "",
+        "always_stop": false
+      },
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "hash",
+    "description": "hashCode override",
+    "value": "@Override\npublic int hashCode() {\n\treturn new org.apache.commons.lang3.builder.HashCodeBuilder().append($VARIABLE$)$END$.toHashCode();\n}",
+    "variables": [
+      {
+        "name": "VARIABLE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "tosb",
+    "description": "toString override with StringBuilder",
+    "value": "@Override\npublic int toString() {\n\tjava.lang.StringBuilder builder = new StringBuilder();$END$\n\treturn builder.toString();\n}",
+    "variables": []
+  },
+  {
+    "name": "toString",
+    "description": "toString override",
+    "value": "@Override\npublic int toString() {\n\treturn $EXPRESSION$;\n}",
+    "variables": [
+      {
+        "name": "EXPRESSION",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "const",
+    "description": "constant initialization",
+    "value": "$MODIFIER$ static final $TYPE$ $NAME$ = $VALUE$;",
+    "variables": [
+      {
+        "name": "MODIFIER",
+        "expression": "",
+        "default_value": "\"public\"",
+        "always_stop": true
+      },
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "new",
+    "description": "class initialization",
+    "value": "new $CLASS$($PARAMETERS$)",
+    "variables": [
+      {
+        "name": "CLASS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "PARAMETERS",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "var",
+    "description": "variable initialization",
+    "value": "$TYPE$ $NAME$ = $VALUE$;",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "vara",
+    "description": "variable assignment",
+    "value": "$NAME$ = $VALUE$;",
+    "variables": [
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "VALUE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "vari",
+    "description": "instance variable declaration",
+    "value": "private $TYPE$ $NAME$;",
+    "variables": [
+      {
+        "name": "TYPE",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      },
+      {
+        "name": "NAME",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  },
+  {
+    "name": "vart",
+    "description": "this assignment",
+    "value": "this.$VAR$ = $VAR$;",
+    "variables": [
+      {
+        "name": "VAR",
+        "expression": "",
+        "default_value": "",
+        "always_stop": true
+      }
+    ]
+  }
+]
