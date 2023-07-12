@@ -203,7 +203,7 @@
   {
     "code": "OverrideMethods",
     "key1": "E",
-    "key2": "S"
+    "key2": "O"
   },
   {
     "code": "SurroundWith",
@@ -246,6 +246,11 @@
     "key2": "D"
   },
   {
+    "code": "Diff.ShowDiff",
+    "key1": "G",
+    "key2": "D"
+  },
+  {
     "code": "Git.Add",
     "key1": "G",
     "key2": "A"
@@ -254,6 +259,11 @@
     "code": "Git.Branches",
     "key1": "G",
     "key2": "B"
+  },
+  {
+    "code": "CheckinProject",
+    "key1": "G",
+    "key2": "C"
   },
   {
     "code": "Git.CompareWithBranch",
@@ -304,6 +314,10 @@
     "code": "Vcs.UpdateProject",
     "key1": "G",
     "key2": "U"
+  },
+  {
+    "code": "CheckinFiles",
+    "key1": "enter"
   },
   {
     "code": "CallHierarchy",
@@ -454,7 +468,7 @@
     "code": "NewTypeScriptFile",
     "key1": "N",
     "key2": "T",
-    "ide": "Webstorm"
+    "ide": "WebStorm"
   },
   {
     "code": "NewPythonFile",
@@ -512,9 +526,6 @@
     "ide": "IntelliJ"
   },
   {
-    "code": "Diff.ShowDiff"
-  },
-  {
     "code": "EditorDuplicate"
   },
   {
@@ -570,9 +581,6 @@
   },
   {
     "code": "Vcs.MoveChangedLinesToChangelist"
-  },
-  {
-    "code": "CodeCompletion"
   },
   {
     "code": "ChangesView.SetDefault"
@@ -648,12 +656,12 @@
     "key2": "E"
   },
   {
-    "code": "MethodDown",
+    "code": "MethodUp",
     "key1": "[",
     "key2": "F"
   },
   {
-    "code": "MethodUp",
+    "code": "MethodDown",
     "key1": "]",
     "key2": "F"
   },
@@ -836,5 +844,9 @@
     "code": "ShowUsages",
     "key1": "U",
     "key2": "U"
+  },
+  {
+    "code": "CodeCompletion",
+    "key1": "space"
   }
 ]
