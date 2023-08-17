@@ -5,6 +5,7 @@ from cac.io.json.json_writer import JsonWriter
 from cac.path.directory import Directory
 from cac.path.file import File
 from cac.regex import Regex
+from cac.sorter import ListSorter
 from ide import IDES, Ide, get_ide_subdirectory, has_ide
 from templates.template import Template, parse_templates
 
@@ -18,7 +19,9 @@ for original_template_directory in original_template_directories:
     for original_template_file in original_template_files:
         templates: List[Template] = parse_templates(original_template_file)
         serialized_templates: List[Dict[str, str]] = [dataclasses.asdict(template) for template in templates]
+        sorted_serialized_templates: List[Dict[str, str]] = ListSorter.sort(serialized_templates,
+            lambda template: template['name'])
         converted_template_file: File = CONVERTED_TEMPLATE_DIRECTORY.join_file(original_template_file.stem, '.json')
         writer: JsonWriter = JsonWriter(converted_template_file.path)
-        writer.write(serialized_templates)
+        writer.write(sorted_serialized_templates)
         writer.close()

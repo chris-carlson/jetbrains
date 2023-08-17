@@ -8,13 +8,13 @@
         "name": "NAME",
         "expression": "",
         "default_value": "",
-        "always_stop": false
+        "always_stop": true
       },
       {
         "name": "VALUE",
         "expression": "",
         "default_value": "",
-        "always_stop": false
+        "always_stop": true
       }
     ]
   }
