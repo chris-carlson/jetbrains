@@ -10,7 +10,6 @@ from cac.path.directory import Directory
 from cac.path.file import File
 from ide import IDES, Ide, get_ide_subdirectory, has_ide
 from templates.template import Template, Variable
-from templates.value import convert_value
 
 CONVERTED_TEMPLATE_DIRECTORY: Directory = Directory.get_cwd().join_directory('templates')
 IDE_GROUPS: MultiDict[Ide, str] = MultiDict[Ide, str](
@@ -18,7 +17,7 @@ IDE_GROUPS: MultiDict[Ide, str] = MultiDict[Ide, str](
             (Ide.WEBSTORM, 'json'), (Ide.WEBSTORM, 'sass'), (Ide.WEBSTORM, 'typescript'), (Ide.WEBSTORM, 'xml'),
             (Ide.PYCHARM, 'json'), (Ide.PYCHARM, 'python'), (Ide.PYCHARM, 'xml')])
 
-SUBSTITUTIONS: Dict[str, str] = {'\t': '    '}
+TAB_SPACES: Dict[str, int] = {'html': 2, 'java': 4, 'json': 2, 'python': 4, 'sass': 2, 'typescript': 2, 'xml': 2}
 CONTEXTS: Dict[str, str] = {'html': 'HTML', 'json': 'JSON', 'python': 'Python', 'sass': 'CSS',
         'typescript': 'TypeScript'}
 
@@ -27,7 +26,8 @@ def parse_template(template: Template, group: str) -> XmlElement:
     context: XmlElement = XmlElement('context', children=[option])
     generated_variables: List[XmlElement] = [parse_variable(converted_variable) for converted_variable in
             template.variables]
-    converted_value: str = convert_value(template.value, SUBSTITUTIONS)
+    tab_length: int = TAB_SPACES[group]
+    converted_value: str = template.value.replace('\t', ' ' * tab_length)
     return XmlElement('template',
         {'name': template.name, 'value': converted_value, 'description': template.description, 'toReformat': 'false',
                 'toShortenFQNames': 'true'}, generated_variables + [context])

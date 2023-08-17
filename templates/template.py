@@ -4,7 +4,6 @@ from typing import Dict, List
 from cac.io.xml.xml_element import XmlElement
 from cac.io.xml.xml_reader import XmlReader
 from cac.path.file import File
-from templates.value import convert_value
 
 @dataclass
 class Template:
@@ -42,3 +41,9 @@ def parse_variable(variable_element: XmlElement) -> Variable:
     default_value: str = variable_element.attributes['defaultValue']
     always_stop: bool = True if variable_element.attributes['alwaysStopAt'] == 'true' else False
     return Variable(name, expression, default_value, always_stop)
+
+def convert_value(value: str, substitutions: Dict[str, str]) -> str:
+    converted_value: str = value[:]
+    for original_fragment, converted_fragment in substitutions.items():
+        converted_value = converted_value.replace(original_fragment, converted_fragment)
+    return converted_value
